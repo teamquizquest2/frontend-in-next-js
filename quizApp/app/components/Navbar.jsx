@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+
 
 import "./Navbar.css";
 
@@ -69,3 +68,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
