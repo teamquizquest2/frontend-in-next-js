@@ -41,37 +41,37 @@ function Home() {
 
         <div className="features-grid">
           <div className="feature-card">
-            <i className="fas fa-user-plus feature-icon"></i>
+           
             <h3>Quick Registration</h3>
             <p>Create your account in seconds and start exploring interactive quizzes instantly.</p>
           </div>
 
           <div className="feature-card">
-            <i className="fas fa-tachometer-alt feature-icon"></i>
+         
             <h3>Smart Dashboard</h3>
             <p>Track your progress, attempt new quizzes, and view performance insights in one place.</p>
           </div>
 
           <div className="feature-card">
-            <i className="fas fa-comments feature-icon"></i>
+         
             <h3>Instant Chat</h3>
             <p>Interact with mentors and classmates for real-time learning support and discussion.</p>
           </div>
 
           <div className="feature-card">
-            <i className="fas fa-star feature-icon"></i>
+            
             <h3>Live Feedback</h3>
             <p>Receive instant ratings and feedback to improve your learning performance.</p>
           </div>
 
           <div className="feature-card">
-            <i className="fas fa-robot feature-icon"></i>
+           
             <h3>AI ChatBot</h3>
             <p>Your personal assistant for guidance, study tips, and subject-based queries.</p>
           </div>
 
           <div className="feature-card">
-            <i className="fas fa-smile feature-icon"></i>
+          
             <h3>Fun Quizzes</h3>
             <p>Enjoy personality and topic-based quizzes designed to make learning fun and exciting!</p>
           </div>
@@ -82,3 +82,4 @@ function Home() {
 }
 
 export default Home;
+
