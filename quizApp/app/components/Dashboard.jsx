@@ -163,7 +163,7 @@ export default function Dashboard() {
         <div className="dashboard">
             <aside className="sidebar">
                 <div className="sidebar-top">
-                    <Link href="/" className="sidebar-logo"><FontAwesomeIcon icon={faBookOpen} /> QuizApp</Link>
+                    <Link href="/" className="sidebar-logo"> QuizApp</Link>
                 </div>
                 <ul className="sidebar-links">
                     <li>Dashboard</li>
@@ -231,4 +231,5 @@ export default function Dashboard() {
         </div>
     );
 }
+
 
