@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+
 import "../components/Dashboard.css";
 
 export default function Dashboard() {
@@ -232,3 +231,4 @@ export default function Dashboard() {
         </div>
     );
 }
+
