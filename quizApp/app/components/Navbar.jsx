@@ -17,7 +17,7 @@ export default function Navbar() {
       {/* Left - Logo */}
       <div className="navbar-logo">
         <Link href="/" className="logo">
-          <FontAwesomeIcon icon={faBookOpen} className="logo-icon" />
+        
           QuizApp
         </Link>
       </div>
@@ -68,4 +68,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 
