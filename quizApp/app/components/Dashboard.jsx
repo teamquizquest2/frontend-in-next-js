@@ -197,34 +197,32 @@ export default function Dashboard() {
                     </div>
                 )}
 
+{screen === "quiz" && selectedSubject && (
+    <div className="center-container quiz-container">
+        <h2>{selectedSubject} Quiz</h2>
 
-                {screen === "quiz" && selectedSubject && (
-                    <div className="center-container quiz-container">
-                         <h2>{selectedSubject} Quiz</h2>
+        <p>Question {qIndex + 1} / {subjects[selectedSubject].length}</p>
 
- <p>Question {qIndex + 1} / {subjects[selectedSubject].length}</p>
+        <h3 className="questionText">
+            {subjects[selectedSubject][qIndex].question}
+        </h3>
 
- <h3 className="questionText">
-     {subjects[selectedSubject][qIndex].question}
- </h3>
-
- {subjects[selectedSubject][qIndex].options.map((op, i) => {
-                            const correctIndex = subjects[selectedSubject][qIndex].options.indexOf(subjects[selectedSubject][qIndex].correct);
-                            const cls = ["btn", "optionBtn"];
-                            if (locked && i === correctIndex) cls.push("correct");
-                            if (locked && i === selectedOption && i !== correctIndex) cls.push("wrong");
-                            return <button key={i} className={cls.join(" ")} onClick={() => chooseOption(i)}>{op}</button>
-                        })}
-                        <button className="btn nextBtn" onClick={nextQuestion} disabled={selectedOption === null}>
-                            {qIndex + 1 === subjects[selectedSubject].length ? "Finish" : "Next"}
-                        </button>
-                        <div className="stickyTimer">Timer: {formatTime(timer)}</div>
-                        <div className="progressBarContainer">
-                            <div className="progressBar" style={{ width: `${Math.floor((qIndex / subjects[selectedSubject].length) * 100)}%` }}></div>
-                        </div>
-                    </div>
-                )}
-
+        {subjects[selectedSubject][qIndex].options.map((op, i) => {
+            const correctIndex = subjects[selectedSubject][qIndex].options.indexOf(subjects[selectedSubject][qIndex].correct);
+            const cls = ["btn", "optionBtn"];
+            if (locked && i === correctIndex) cls.push("correct");
+            if (locked && i === selectedOption && i !== correctIndex) cls.push("wrong");
+            return <button key={i} className={cls.join(" ")} onClick={() => chooseOption(i)}>{op}</button>
+        })}
+        <button className="btn nextBtn" onClick={nextQuestion} disabled={selectedOption === null}>
+            {qIndex + 1 === subjects[selectedSubject].length ? "Finish" : "Next"}
+        </button>
+        <div className="stickyTimer">Timer: {formatTime(timer)}</div>
+        <div className="progressBarContainer">
+            <div className="progressBar" style={{ width: `${Math.floor((qIndex / subjects[selectedSubject].length) * 100)}%` }}></div>
+        </div>
+    </div>
+)}
                 {screen === "result" && (
                     <div className="center-container quiz-container">
                         <div className="finalScoreBox">
@@ -237,6 +235,7 @@ export default function Dashboard() {
         </div>
     );
 }
+
 
 
 
