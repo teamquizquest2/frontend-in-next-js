@@ -1,5 +1,5 @@
 ## Live Demo
-https://frontend-in-next-js-g41k.vercel.app/
+https://frontend-in-next-js-mfer.vercel.app/
 
 ## Note
 This deployment includes frontend only.
