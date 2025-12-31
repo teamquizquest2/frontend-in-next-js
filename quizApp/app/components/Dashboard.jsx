@@ -201,7 +201,15 @@ export default function Dashboard() {
                 {screen === "quiz" && selectedSubject && (
                     <div className="center-container quiz-container">
                         <h2>{selectedSubject} Quiz</h2>
-                        <p>Question {qIndex + 1} / {subjects[selectedSubject].length}</p>
+
+<p>Question {qIndex + 1} / {subjects[selectedSubject].length}</p>
+
+<h3 className="questionText">
+  {subjects[selectedSubject][qIndex].question}
+</h3>
+
+
+
                         {subjects[selectedSubject][qIndex].options.map((op, i) => {
                             const correctIndex = subjects[selectedSubject][qIndex].options.indexOf(subjects[selectedSubject][qIndex].correct);
                             const cls = ["btn", "optionBtn"];
@@ -231,5 +239,6 @@ export default function Dashboard() {
         </div>
     );
 }
+
 
 
